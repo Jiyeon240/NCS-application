@@ -1,29 +1,15 @@
 import numpy as np
-#1. numpy 사용해서 배열 생성하기
-data1 = np.array([40,30,20,10])
-print(data1)
-
-data2 = np.array([[1,2],[3,4]])
-print(data2)
-
-data3 = np.zeros((3,4,2))
-print(data3)
-
-data4 = np.ones((8))
-print(data4)
-
-#arange, full, linsapce, random 등등
-
-#2. numpy shape, ndim(n차원), dtype(데이터타입), size 등등
-print(data1.dtype, data2.dtype, data3.dtype, data4.dtype)
-
-#size, T, itemsize ...
-
-
 
 items = [40,7,99,-3]
 
-print(items)
+scores = np.array([
+    [80,100,90]
+    [80,75,95]
+    [80,99,87]
+])
 
-data1 = np.array([40,7,99,-3])
-print(data1 + 5)
+print(f"전체 평균 : {np.means(scores)}")
+print(f"국 영 수 과목별 평균 : {np.mean(scores, axis=0)}")
+#axis =0 열별 평균
+
+print(f"a학생, b학생, c학생 최고점수 : {np.max(scores, axis=1)}")
