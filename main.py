@@ -18,3 +18,12 @@ print(data4)
 print(data1.dtype, data2.dtype, data3.dtype, data4.dtype)
 
 #size, T, itemsize ...
+
+
+
+items = [40,7,99,-3]
+
+print(items)
+
+data1 = np.array([40,7,99,-3])
+print(data1 + 5)
